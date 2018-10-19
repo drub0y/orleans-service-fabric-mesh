@@ -1,0 +1,32 @@
+﻿## Service definition ##
+application:
+  schemaVersion: 1.0.0-preview1
+  name: orleans_service_fabric_mesh
+  properties:
+    services:
+      - name: WebApp
+        properties:
+          description: Host service for the web application.
+          osType: Windows
+          codePackages:
+            - name: WebApp
+              image: webclient:dev
+              endpoints:
+                - name: WebAppListener
+                  port: 20003
+              environmentVariables:
+                - name: ASPNETCORE_URLS
+                  value: http://+:20003
+                - name: ORLEANS_AZURE_STORAGE_CLUSTER_CONNECTION_STRING
+                  value: "DefaultEndpointsProtocol=https;AccountName=orleansonsfmesh;AccountKey=G5cnphMOPIdghOtconFUanMlFNZpqY4yvHhJlaTx0toqst9/jS/aOqaHLhZB8yF2j4yF7yd8Mpf2UT7N5BUcLg==;EndpointSuffix=core.windows.net"
+                - name: ORLEANS_AZURE_STORAGE_CLUSTER_TABLE_NAME
+                  value: "OrleansClusterMembership"
+#               - name: ApplicationInsights:InstrumentationKey
+#                 value: "<Place AppInsights key here, or reference it via a secret>"
+              resources:
+                requests:
+                  cpu: 0.5
+                  memoryInGB: 1
+          replicaCount: 1
+          networkRefs:
+            - name: orleans_service_fabric_mesh_network

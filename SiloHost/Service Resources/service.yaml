@@ -1,0 +1,32 @@
+﻿## Service definition ##
+application:
+  schemaVersion: 1.0.0-preview1
+  name: orleans_service_fabric_mesh
+  properties:
+    services:
+      - name: SiloHost
+        properties:
+          description: Host service for Orleans Silos.
+          osType: Windows
+          codePackages:
+            - name: SiloHost
+              image: silohost:dev
+              endpoints:
+                - name: SiloHostListener
+                  port: 20007
+              resources:
+                requests:
+                  cpu: 2
+                  memoryInGB: 1
+              environmentVariables:
+                - name: ORLEANS_SILO_PORT
+                  value: 11111
+                - name: ORLEANS_GATEWAY_PORT
+                  value: 30000
+                - name: ORLEANS_AZURE_STORAGE_CLUSTER_CONNECTION_STRING
+                  value: "DefaultEndpointsProtocol=https;AccountName=orleansonsfmesh;AccountKey=G5cnphMOPIdghOtconFUanMlFNZpqY4yvHhJlaTx0toqst9/jS/aOqaHLhZB8yF2j4yF7yd8Mpf2UT7N5BUcLg==;EndpointSuffix=core.windows.net"
+                - name: ORLEANS_AZURE_STORAGE_CLUSTER_TABLE_NAME
+                  value: "OrleansClusterMembership"
+          replicaCount: 1
+          networkRefs:
+            - name: orleans_service_fabric_mesh_network

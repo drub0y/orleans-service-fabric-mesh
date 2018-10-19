@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28124.53
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiloHost", "SiloHost\SiloHost.csproj", "{E2E5C328-F921-484B-A178-A66F1F0948E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebClient", "WebClient\WebClient.csproj", "{C92A44B4-D1D4-433B-B74E-867107AA3E5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foo.Interfaces", "Foo.Interfaces\Foo.Interfaces.csproj", "{4982193C-47AF-4C05-BBEA-90F34112E8FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foo.Implementation", "Foo.Implementation\Foo.Implementation.csproj", "{1C64621F-1679-47AE-8EE9-71D7D1A60C69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CF4F4802-3A13-4D8D-821E-72A771946B4C}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{9B56FCB0-63B4-404F-8A09-42EF52B53347}") = "Orleans on Service Fabric Mesh", "MeshApp\Orleans on Service Fabric Mesh.sfaproj", "{5D0FD384-ACCA-4EFA-9350-52C9239334F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2E5C328-F921-484B-A178-A66F1F0948E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2E5C328-F921-484B-A178-A66F1F0948E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2E5C328-F921-484B-A178-A66F1F0948E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2E5C328-F921-484B-A178-A66F1F0948E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C92A44B4-D1D4-433B-B74E-867107AA3E5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C92A44B4-D1D4-433B-B74E-867107AA3E5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C92A44B4-D1D4-433B-B74E-867107AA3E5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C92A44B4-D1D4-433B-B74E-867107AA3E5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4982193C-47AF-4C05-BBEA-90F34112E8FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4982193C-47AF-4C05-BBEA-90F34112E8FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4982193C-47AF-4C05-BBEA-90F34112E8FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4982193C-47AF-4C05-BBEA-90F34112E8FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C64621F-1679-47AE-8EE9-71D7D1A60C69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C64621F-1679-47AE-8EE9-71D7D1A60C69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C64621F-1679-47AE-8EE9-71D7D1A60C69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C64621F-1679-47AE-8EE9-71D7D1A60C69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D0FD384-ACCA-4EFA-9350-52C9239334F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D0FD384-ACCA-4EFA-9350-52C9239334F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D0FD384-ACCA-4EFA-9350-52C9239334F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D0FD384-ACCA-4EFA-9350-52C9239334F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A1D5847-AC2C-40E1-9B06-5230FD2EBA4B}
+	EndGlobalSection
+EndGlobal

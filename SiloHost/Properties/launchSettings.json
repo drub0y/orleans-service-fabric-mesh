@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "SiloHost": {
+      "commandName": "Project"
+    },
+    "Service Fabric Local Cluster": {
+      "commandName": "SFApp",
+      "launchUrl": "http://{ServiceIpAddress}:{ServicePort}"
+    }
+  }
+}

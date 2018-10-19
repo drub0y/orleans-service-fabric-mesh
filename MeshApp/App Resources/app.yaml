@@ -1,0 +1,10 @@
+﻿application:
+  schemaVersion: 1.0.0-preview1
+  name: orleans_service_fabric_mesh
+  properties:
+    description: Orleans running on Service Fabric Mesh.
+    environmentVariables:
+      - name: ORLEANS_SILO_PORT
+        value: 11111
+      - name: ORLEANS_GATEWAY_PORT
+        value: 30000
